@@ -1,12 +1,14 @@
 html, body {
   margin: 0;
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
+  position: relative; 
 }
 
 body {
-  position: relative; 
   display: flex;
+  flex-direction: column;
+  columns: 1;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -14,10 +16,10 @@ body {
 
 #container {
   display: grid;
-  grid-template-columns: repeat(16,1fr);
+  /* grid-template-columns: repeat(16,1fr); */
   grid-gap: 1px;
   border: 1px solid black;
-  width: 35%;
+  width: 40%;
   background-color: black;
   aspect-ratio: 1/1;
 }
@@ -26,3 +28,10 @@ body {
   background-color: white;
 }
 
+.highlighted {
+  background-color: aqua;
+}
+
+#grid-size-btn{
+  margin-bottom: 1%;
+}
