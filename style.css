@@ -7,11 +7,16 @@ body {
 
 #container {
   display: grid;
-  grid-template-columns: repeat(16,1fr);
-  height: 50vh;
+  grid-template-columns: repeat(16,.5fr);
+  grid-gap: 1px;
+  border: 1px solid black;
+  height: same-as-width;
   width: 50%;
+  background-color: black;
+  aspect-ratio: 1/1;
 }
 
-#grid-item {
-  border: 1px solid black;
+.grid-item {
+  background-color: white;
 }
+
