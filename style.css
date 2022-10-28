@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
 body {
   display: flex;
   align-items: center;
@@ -7,11 +13,10 @@ body {
 
 #container {
   display: grid;
-  grid-template-columns: repeat(16,.5fr);
+  grid-template-columns: repeat(16,1fr);
   grid-gap: 1px;
   border: 1px solid black;
-  height: same-as-width;
-  width: 50%;
+  width: 35%;
   background-color: black;
   aspect-ratio: 1/1;
 }
