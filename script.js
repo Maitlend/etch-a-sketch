@@ -1,12 +1,24 @@
 const container = document.getElementById("container");
 const gridSizeBtn = document.getElementById("grid-size-btn");
 
-gridSizeBtn.addEventListener("click", gridSizeHandler);
-
 buildGrid(16);
 
+gridSizeBtn.addEventListener("click", gridSizeHandler);
+
 function gridSizeHandler(){
-  const size = prompt("Please enter a size for grid row (ex. 64): ");
+  let size = prompt("Please enter a size for grid row (ex. 64): ");
+  if(!size){
+    return;
+  }
+  while(!parseInt(size)){
+    if(size===null){
+      return;
+    }
+    size = prompt(`"${size}" is an invalid entry. Please enter a number (ex. 64): `);
+  }
+  if(size>100){
+    size=100;
+  }
   removeGrid();
   buildGrid(size);
 }
@@ -16,6 +28,7 @@ function buildGrid(gridSize){
     const div = document.createElement('div');
     div.classList.add('grid-item');
     div.addEventListener("mouseover", colorCell);
+    div.addEventListener("touchend", colorCell);
     container.appendChild(div);
   }
   container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr);`);
