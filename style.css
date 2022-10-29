@@ -1,6 +1,10 @@
-html, body {
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, main {
   margin: 0;
-  height: 100%;
+  /* height: 100%; */
   overflow: hidden;
   position: relative; 
 }
@@ -8,10 +12,20 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
   columns: 1;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height:96vh; */
+}
+
+header {
+  text-align: center;
 }
 
 #container {
@@ -36,9 +50,19 @@ body {
   margin-bottom: 1%;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1rem;
+}
 
 @media screen and (max-width: 480px) {
-  body {
+  main {
      max-height: 100vh;
      overflow-y: hidden;
   }
