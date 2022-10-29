@@ -10,7 +10,7 @@ function gridSizeHandler(){
   if(!size){
     return;
   }
-  while(!parseInt(size)){
+  while(!parseInt(size) || size.includes('-')){
     if(size===null){
       return;
     }
